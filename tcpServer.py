@@ -7,9 +7,8 @@ HOST = ''
 PORT = 20000
 BUFSIZE = 1024
 ADDR = (HOST, PORT)
-help(socket)
-'''
-tcpSerSock = sock(AF_INET, SOCK_STREAM)
+
+tcpSerSock = socket(AF_INET, SOCK_STREAM)
 tcpSerSock.bind(ADDR)
 tcpSerSock.listen(5)
 
@@ -24,6 +23,5 @@ while True:
 			break
 		tcpCliSock.send('[%s] %s' % (ctime(), data))
 	
-		tcpCliSock.close()
+	tcpCliSock.close()
 tcpSerSock.close()	
-'''	

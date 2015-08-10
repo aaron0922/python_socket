@@ -8,7 +8,7 @@ PORT = 20000
 BUFSIZE = 1024
 ADDR = (HOST, PORT)
 
-udpSerSock = sock(AF_INET, SOCK_DGRAM)
+udpSerSock = socket(AF_INET, SOCK_DGRAM)
 udpSerSock.bind(ADDR)
 
 while True:
